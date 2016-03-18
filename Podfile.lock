@@ -1,0 +1,15 @@
+PODS:
+  - KVNProgress (2.2.4)
+  - MobpexSDK (0.7.0)
+
+DEPENDENCIES:
+  - KVNProgress
+  - MobpexSDK
+
+SPEC CHECKSUMS:
+  KVNProgress: 541edcea5a1fef592aceac8d791a410d38cb499d
+  MobpexSDK: 31a32fa73a2b0aa695c854e90bb00f59bb2ff034
+
+PODFILE CHECKSUM: 89d1c3a8d00841eedb6e6595961621e066fc06e4
+
+COCOAPODS: 1.0.0.beta.5

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F67C61D959306C9AC64CC94 /* libPods-MobpexDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DC20F302511B959E44A5E8 /* libPods-MobpexDemo.a */; };
 		E9574ACE1C9B94EA008682A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9574ACD1C9B94EA008682A9 /* main.m */; };
 		E9574AD91C9B94EA008682A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9574AD81C9B94EA008682A9 /* Assets.xcassets */; };
 		E9574AE71C9B951F008682A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9574AE41C9B951F008682A9 /* AppDelegate.m */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03DC20F302511B959E44A5E8 /* libPods-MobpexDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MobpexDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF3B6DEB932C64B200BFBAD /* Pods-MobpexDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobpexDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobpexDemo/Pods-MobpexDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6CB9DD9DD6A3C8712D407B85 /* Pods-MobpexDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobpexDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobpexDemo/Pods-MobpexDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E9574AC91C9B94EA008682A9 /* MobpexDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobpexDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9574ACD1C9B94EA008682A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9574AD81C9B94EA008682A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F67C61D959306C9AC64CC94 /* libPods-MobpexDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A1CC3C001B6C71E38645355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03DC20F302511B959E44A5E8 /* libPods-MobpexDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9574AC01C9B94EA008682A9 = {
 			isa = PBXGroup;
 			children = (
 				E9574ACB1C9B94EA008682A9 /* MobpexDemo */,
 				E9574ACA1C9B94EA008682A9 /* Products */,
+				F71490E4C0E33613FD12BDA2 /* Pods */,
+				4A1CC3C001B6C71E38645355 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F71490E4C0E33613FD12BDA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CB9DD9DD6A3C8712D407B85 /* Pods-MobpexDemo.debug.xcconfig */,
+				1AF3B6DEB932C64B200BFBAD /* Pods-MobpexDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9574AE01C9B94EA008682A9 /* Build configuration list for PBXNativeTarget "MobpexDemo" */;
 			buildPhases = (
+				4C60BC4DB77A537C9C6B353A /* 📦 Check Pods Manifest.lock */,
 				E9574AC51C9B94EA008682A9 /* Sources */,
 				E9574AC61C9B94EA008682A9 /* Frameworks */,
 				E9574AC71C9B94EA008682A9 /* Resources */,
+				B09924E811B7D6D8FCACBB16 /* 📦 Embed Pods Frameworks */,
+				B1A47FCB5F1D8A878CBF3BE6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C60BC4DB77A537C9C6B353A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B09924E811B7D6D8FCACBB16 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobpexDemo/Pods-MobpexDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1A47FCB5F1D8A878CBF3BE6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobpexDemo/Pods-MobpexDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9574AC51C9B94EA008682A9 /* Sources */ = {
@@ -233,6 +308,7 @@
 		};
 		E9574AE11C9B94EA008682A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB9DD9DD6A3C8712D407B85 /* Pods-MobpexDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -245,6 +321,7 @@
 		};
 		E9574AE21C9B94EA008682A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF3B6DEB932C64B200BFBAD /* Pods-MobpexDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -274,6 +351,7 @@
 				E9574AE21C9B94EA008682A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,6 +4,8 @@
 # use_frameworks!
 
 source 'https://gitlab.com/datayp/PodSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '7.0'
 
 target 'MobpexDemo' do

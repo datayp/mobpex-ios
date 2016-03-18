@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
  	s.platform = :ios	
   	s.name                           = 'MobpexSDK'
-  	s.homepage = 'https://gitlab.com/datayp/mobpex-sdk'
+  	s.homepage = 'https://gitlab.com/datayp/MobpexSDK'
  	s.version                        = '0.7.0'
  	s.summary                        = 'Mobpex 聚合支付 SDK'
  	s.license                        = { :type => 'MIT', :file => 'LICENSE' }
