@@ -16,7 +16,7 @@
 #define kClientError @"client-error"
 #define kBizError @"biz-error"
 
-NSString *const MobPexDemoApiURL = @"https://220.181.25.235/yop-center/demo";
+NSString *const MobPexDemoApiURL = @"https://220.181.25.235/mashup-demo/demo/submitOrder";
 
 @interface HomeViewCtrl () <UITextFieldDelegate, UIWebViewDelegate, NSURLSessionDelegate>
 
